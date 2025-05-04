@@ -58,20 +58,31 @@ body {
   grid-template-columns: 1fr 9fr;
   align-items: center;
   justify-content: space-between;
-  background-color: purple;
   column-gap: 5px;
 }
 
 .magnifying-glass {
+  height: 30px;
+}
+
+.search {
   grid-column-start: 1;
   grid-column-end: 2;
-  background-color: blue;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  background: none;
+  border-style: none;
 }
 
 .search-bar {
   grid-column-start: 2;
   grid-column-end: 3;
-  background-color: violet;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  background-color: var(--custom-grey);
+  border-radius: var(--main-content-radius);
+  border-style: none;
+  height: 30px;
 }
 
 .notification-area {
@@ -83,22 +94,29 @@ body {
   grid-template-columns: 1fr 1fr 1fr 3fr;
   align-items: center;
   justify-content: space-between;
-  background-color: pink;
 }
 
 .notification-icon {
   grid-column-start: 2;
   grid-column-end: 3;
+  height: 30px;
+  align-self: center;
+  justify-self: center;
 }
 
 .small-avatar {
   grid-column-start: 3;
   grid-column-end: 4;
+  align-self: center;
+  justify-self: center;
 }
 
 .user-name-short {
   grid-column-start: 4;
   grid-column-end: 6;
+  font-weight: 500;
+  align-self: center;
+  justify-self: center;
 }
 
 .user-area {
@@ -109,7 +127,6 @@ body {
   display: grid;
   grid-template-columns: 3fr 7fr;
   grid-template-rows: 1fr 1fr;
-  background-color: orange;
 }
 
 .big-avatar {
@@ -127,7 +144,6 @@ body {
   grid-row-end: 2;
   grid-column-start: 2;
   grid-column-end: 3;
-  background-color: yellow;
   justify-self: self-start;
   align-self: self-end;
   font-size: 12px;
@@ -138,9 +154,10 @@ body {
   grid-row-end: 3;
   grid-column-start: 2;
   grid-column-end: 3;
-  background-color: red;
   justify-self: self-start;
   align-self: self-start;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .post-area {
@@ -152,8 +169,17 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   justify-content: space-between;
-  background-color: teal;
-  column-gap: 5px;
+  gap: 25px;
+}
+
+.user-action {
+  background-color: var(--custom-blue);
+  border-radius: 20px;
+  border-style: none;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 600;
 }
 
 li {
@@ -256,6 +282,7 @@ li {
   grid-column-end: 7;
   align-self: center;
   justify-self: center;
+  height: 20px;
 }
 
 .card-watch {
@@ -265,6 +292,7 @@ li {
   grid-column-end: 8;
   align-self: center;
   justify-self: center;
+  height: 20px;
 }
 
 .card-share {
@@ -274,6 +302,8 @@ li {
   grid-column-end: 9;
   align-self: center;
   justify-self: center;
+  height: 20px;
+  rotate: 270deg;
 }
 
 .announcements-title {
