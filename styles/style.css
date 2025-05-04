@@ -92,8 +92,8 @@ body {
   grid-column-end: 3;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 3fr;
+  align-content: center;
   align-items: center;
-  justify-content: space-between;
 }
 
 .notification-icon {
@@ -104,9 +104,21 @@ body {
   justify-self: center;
 }
 
-.small-avatar {
+.small-avatar-area {
   grid-column-start: 3;
   grid-column-end: 4;
+  display: grid;
+  align-content: center;
+  align-items: center;
+  align-self: center;
+  justify-self: center;
+}
+
+.small-avatar {
+  background-color: var(--custom-orange);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
   align-self: center;
   justify-self: center;
 }
@@ -125,18 +137,26 @@ body {
   grid-column-start: 1;
   grid-column-end: 2;
   display: grid;
-  grid-template-columns: 3fr 7fr;
+  grid-template-columns: 1fr 9fr;
   grid-template-rows: 1fr 1fr;
 }
 
-.big-avatar {
+.big-avatar-area {
   grid-row-start: 1;
   grid-row-end: 3;
   grid-column-start: 1;
   grid-column-end: 2;
-  background-color: green;
+  display: grid;
   align-self: center;
-  justify-self: center;
+  justify-self: self-end;
+  padding: 10px;
+}
+
+.big-avatar {
+  background-color: var(--custom-orange);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
 }
 
 .greeting {
@@ -251,7 +271,7 @@ li {
   background-color: white;
   border-radius: var(--main-content-radius);
   padding: 20px;
-  border-left: 10px solid #e7b64a;
+  border-left: 10px solid var(--custom-orange);
   box-shadow: 5px 5px 5px var(--custom-box-shadow-grey);
 }
 
@@ -339,7 +359,7 @@ li {
   justify-self: self-start;
   align-self: self-end;
   font-weight: 600;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .announcement-text {
@@ -355,7 +375,7 @@ li {
   width: 100%;
   background-color: grey;
   justify-self: center;
-  align-self: self-end;
+  align-self: center;
 }
 
 .trending-title {
@@ -378,22 +398,33 @@ li {
   border-radius: var(--main-content-radius);
   box-shadow: 5px 5px 5px var(--custom-box-shadow-grey);
   padding: 20px;
-  gap: 10px;
+  gap: 5px;
 }
 
 .trending-project {
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 3fr;
+  column-gap: 5px;
 }
 
-.trending-avatar {
+.trending-avatar-area {
   grid-row-start: 1;
   grid-row-end: 3;
   grid-column-start: 1;
   grid-column-end: 2;
+  display: grid;
   justify-self: center;
   align-self: center;
+}
+
+.trending-avatar {
+  background-color: var(--custom-orange);
+  width: 40px;
+  height: 40px;
+  justify-self: center;
+  align-self: center;
+  border-radius: 50%;
 }
 
 .trending-handle {
