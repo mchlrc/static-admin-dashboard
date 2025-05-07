@@ -30,9 +30,7 @@ body {
   grid-row-end: 3;
   grid-template-rows: 1fr 3fr 9fr;
   background-color: var(--custom-blue);
-  /* padding-top: var(--top-inset); */
   padding-left: 25px;
-  /* align-content: baseline; */
 }
 
 .filter-white {
