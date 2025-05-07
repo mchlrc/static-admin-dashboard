@@ -28,10 +28,123 @@ body {
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 3;
+  grid-template-rows: 1fr 3fr 9fr;
   background-color: var(--custom-blue);
-  padding-top: var(--top-inset);
+  /* padding-top: var(--top-inset); */
   padding-left: 25px;
-  align-content: baseline;
+  /* align-content: baseline; */
+}
+
+.filter-white {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(152deg)
+    brightness(105%) contrast(103%);
+}
+
+.sidebar-title-area {
+  display: grid;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-template-columns: 1fr 4fr;
+  align-content: center;
+  gap: 10px;
+}
+
+.sidebar-title {
+  align-content: center;
+  color: white;
+  font-size: 30px;
+}
+
+.sidebar-image {
+  background-image: url(../images/icons/view-dashboard.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  justify-self: center;
+}
+
+.home-icon::before {
+  background-image: url(../images/icons/home.svg);
+}
+
+.profile-icon::before {
+  background-image: url(../images/icons/card-account-details-outline.svg);
+}
+
+.messages-icon::before {
+  background-image: url(../images/icons/message-reply.svg);
+}
+
+.history-icon::before {
+  background-image: url(../images/icons/clock-time-three.svg);
+}
+
+.tasks-icon::before {
+  background-image: url(../images/icons/note-multiple.svg);
+}
+
+.communities-icon::before {
+  background-image: url(../images/icons/account-group.svg);
+}
+
+.settings-icon::before {
+  background-image: url(../images/icons/cog.svg);
+}
+
+.support-icon::before {
+  background-image: url(../images/icons/help-box.svg);
+}
+
+.privacy-icon::before {
+  background-image: url(../images/icons/shield-check.svg);
+}
+
+li::before {
+  content: "";
+  display: inline-block;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 30px;
+  width: 30px;
+  vertical-align: top;
+  margin-right: 20px;
+  padding: 0px;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(152deg)
+    brightness(105%) contrast(103%);
+}
+
+.sidebar menu {
+  padding: 0px;
+}
+
+li {
+  list-style: none;
+  color: white;
+  margin-top: 10px;
+  font-size: 25px;
+}
+
+.sidebar .logo {
+  font-size: 2em;
+  color: white;
+}
+
+.first-menu {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  justify-self: self-start;
+  align-self: self-start;
+}
+
+.menu {
+  margin: 0px;
+}
+
+.second-menu {
+  grid-row-start: 3;
+  grid-row-end: 4;
 }
 
 .header {
@@ -63,6 +176,7 @@ body {
 
 .magnifying-glass {
   height: 30px;
+  stroke: white;
 }
 
 .search {
@@ -200,26 +314,6 @@ body {
   padding-top: 10px;
   padding-bottom: 10px;
   font-weight: 600;
-}
-
-li {
-  color: white;
-  list-style: square;
-  list-style-position: outside;
-  margin: left;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  font-size: 1.5em;
-}
-
-.sidebar menu {
-  padding: 0px;
-  margin-top: 80px;
-}
-
-.sidebar .logo {
-  font-size: 2em;
-  color: white;
 }
 
 .content {
