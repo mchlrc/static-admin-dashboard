@@ -1,2 +1,3 @@
-# odin-admin-dashboard
-Admin Dashboard project from The Odin Project
+# static-admin-dashboard
+
+This is a static layout page for an admin dashboard.
